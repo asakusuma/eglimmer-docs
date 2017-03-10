@@ -5,7 +5,7 @@
     {{#link-to "project" project.id}}{{project.name}}{{/link-to}}
     <ul class="menu vertical nested">
       {{#each project.children as |child|}}
-        <li>{{#link-to "project.module" project.id child.id}}{{child.name}}{{/link-to}}</li>
+        <li>{{#link-to "project.module" project.id child.slug}}{{child.name}}{{/link-to}}</li>
       {{/each}}
     </ul>
   </li>

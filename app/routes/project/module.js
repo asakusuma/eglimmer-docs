@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     const docs = this.get('docs');
     return {
       project: docs.fetchProject(project_id),
-      module: docs.fetchModule(module_id)
+      module: docs.fetchModule(module_id, project_id)
     };
   }
 });

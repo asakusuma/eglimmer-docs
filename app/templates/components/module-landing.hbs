@@ -1,2 +1,9 @@
 <h5>{{project.name}}</h5>
 <h3>{{module.name}}</h3>
+
+<strong>Methods</strong>
+<ul>
+{{#each module.methods as |method|}}
+  <li>{{method.name}}</li>
+{{/each}}
+</ul>

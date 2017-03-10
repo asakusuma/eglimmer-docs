@@ -3,26 +3,44 @@ import Ember from 'ember';
 const DATA = window.docs;
 
 function materialize(obj) {
-  return DATA.included.find((item) => item.id === obj.id && item.type === obj.type);
+  if (Object.keys(obj).length !== 2 || !obj.id || !obj.type) {
+    return obj;
+  }
+  const found = DATA.included.find((item) => item.id === obj.id && item.type === obj.type);
+  return found;
 }
 
 function inflateRelationship({ relationships }, key, recurse = false) {
-  return relationships[key].data.map(materialize);
+  const v = relationships[key].data.map(materialize);
+  return v;
 }
 
-function toViewObject({ type, id, attributes, relationships }) {
-  let viewObject = {
+function toViewObject(obj) {
+  return _toViewObject(obj, false);
+}
+
+function toInflatedViewObject(obj) {
+  return _toViewObject(obj, true);
+}
+
+function _toViewObject({ type, id, attributes, relationships }, recurse = false) {
+  const identifier = {
     type,
     id
   };
+  let viewObject = identifier;
+  if (!attributes) {
+    attributes = materialize(identifier).attributes;
+  }
 
   for (let key in attributes) {
     viewObject[key] = attributes[key];
   }
+  
   for (let key in relationships) {
-    viewObject[key] = relationships[key].data;
+    let relationship = relationships[key];
+    viewObject[key] = recurse ? relationship.data.map(toInflatedViewObject) : relationship.data;
   }
-
   return viewObject;
 }
 
@@ -46,18 +64,19 @@ function toMenuProject(menu) {
   for (let key in menu) {
     if (Array.isArray(menu[key])) {
       const set = menu[key]
-        .filter((obj) => !obj.attributes)
-        .map(materialize)
-        .map(toViewObject);
+        .filter((obj) => {
+          return obj.flags && obj.flags.isNormalized;
+        })
+        .map(toInflatedViewObject)
       children = children.concat(set);
     }
   }
-  menu.children = children;
+  menu.children = children.sort((a, b) => a.name > b.name ? 1 : -1);
   return menu;
 }
 
 function generateMenu(root) {
-  return inflateRelationship(root.data, 'docmodules').map(toViewObject).map(toMenuProject);
+  return inflateRelationship(root.data, 'docmodules').map(toInflatedViewObject).map(toMenuProject);
 }
 
 export default Ember.Service.extend({
@@ -68,9 +87,15 @@ export default Ember.Service.extend({
       menu: generateMenu(this.main)
     };
   },
-  fetchModule(moduleId) {
-    const record = this.main.included.find(({ id }) => id === moduleId);
-    return toViewObject(record);
+  fetchModule(moduleId, projectId) {
+    let record = this.main.included.find(({ id }) => id === moduleId);
+
+    if (!record) {
+      const realId = this.main.data.attributes.idMap[projectId][moduleId];
+      record = this.main.included.find(({ id }) => id === realId);
+    }
+
+    return toInflatedViewObject(record);
   },
   fetchProject(projectId) {
     return toViewObject(this.main.included.find(({ type, id }) => type === 'projectdoc' && id === projectId));
