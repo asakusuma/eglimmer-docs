@@ -1,6 +1,9 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var json = require('broccoli-json-module');
+var Funnel = require('broccoli-funnel');
+var Rollup = require('broccoli-rollup');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -20,5 +23,19 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  var docs = new Rollup(json('doc-source'), {
+    rollup: {
+      entry: 'main.js',
+      format: 'umd',
+      dest: 'main.js',
+      moduleName: 'docs'
+    }
+  });
+
+  var extraAssets = new Funnel(docs, {
+    srcDir: '/',
+    destDir: '/assets/docs'
+  });
+
+  return app.toTree(extraAssets);
 };

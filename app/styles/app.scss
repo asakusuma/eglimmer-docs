@@ -1,0 +1,19 @@
+@import "normalize";
+@import "basic";
+
+#app-container {
+  margin-top: 10px;
+  display: -webkit-flex;
+  display: flex;
+}
+
+#menu-container {
+  background-color: #F9F9F9;
+  min-width: 300px;
+}
+
+#content-container {
+  background-color: #F9F9F9;
+  -webkit-flex: 1;
+          flex: 1;
+}
