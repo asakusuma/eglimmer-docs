@@ -1,9 +1,39 @@
 <h5>{{project.name}}</h5>
 <h3>{{module.name}}</h3>
 
+{{#if module.comment}}
+  <p>{{module.comment.text}}</p>
+{{/if}}
+
 <strong>Methods</strong>
-<ul>
+<ul class="method-list">
 {{#each module.methods as |method|}}
-  <li>{{method.name}}</li>
+  <li>
+    <strong>{{method.name}}</strong>
+    {{#each method.callSignatures as |signature|}}
+    <ol>
+      {{#if signature.comment}}
+        <p>{{signature.comment.text}}</p>
+      {{/if}}
+      {{#each signature.parameters as |param|}}
+        {{param.name}}
+        {{type-annotation type=param.type}}
+      {{/each}}
+    </ol>
+    {{/each}}
+  </li>
+{{/each}}
+</ul>
+
+<strong>Properties</strong>
+<ul class="properties-list">
+{{#each module.properties as |property|}}
+  <li>
+    <strong>{{property.name}}</strong>
+    {{type-annotation type=property.type}}
+    {{#if property.comment}}
+      <p>{{property.comment.text}}</p>
+    {{/if}}
+  </li>
 {{/each}}
 </ul>

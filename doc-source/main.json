@@ -7,10 +7,10 @@
       "intro": "Started at the bottom now we here",
       "idMap": {
         "_glimmer_resolver": {
+          "moduleregistry": "5",
           "basicregistry": "53",
           "resolver": "29",
           "resolverconfiguration": "24",
-          "moduleregistry": "5",
           "modulecollectiondefinition": "18",
           "moduletypedefinition": "16",
           "packagedefinition": "12"
@@ -21,12 +21,12 @@
           "resolver": "196",
           "factory": "70",
           "factorydefinition": "65",
-          "registry": "155",
-          "registrationoptions": "76",
           "injection": "79",
-          "owner": "229",
-          "registryaccessor": "119",
           "registrywriter": "82",
+          "registrationoptions": "76",
+          "registryaccessor": "119",
+          "registry": "155",
+          "owner": "229",
           "specifier": "250"
         }
       }
@@ -204,6 +204,31 @@
         "alias": "basicregistry",
         "fullName": "BasicRegistry",
         "hierarchy": "Class BasicRegistry\n  Constructor constructor\n    ConstructorSignature new BasicRegistry:BasicRegistry\n      Parameter entries:Dict\n  Property _entries:Dict\n  Method get\n    CallSignature get:any\n      Parameter specifier:string\n  Method has\n    CallSignature has:boolean\n      Parameter specifier:string",
+        "implementedTypes": [
+          {
+            "type": "reference",
+            "name": "ModuleRegistry",
+            "reflection": {
+              "id": 5,
+              "type": "interface",
+              "slug": "moduleregistry",
+              "sources": [
+                {
+                  "fileName": "module-registry.ts",
+                  "line": 1,
+                  "character": 31,
+                  "url": "https://github.com/asakusuma/glimmer-resolver/blob/aab5074/src/module-registry.ts#L1"
+                }
+              ],
+              "parent": {
+                "id": 0,
+                "type": 0,
+                "slug": "_glimmer_resolver"
+              }
+            },
+            "isArray": false
+          }
+        ],
         "sources": [
           {
             "fileName": "module-registries/basic-registry.ts",
@@ -258,8 +283,22 @@
                   "type": "reference",
                   "name": "BasicRegistry",
                   "reflection": {
-                    "id": "53",
-                    "type": "class"
+                    "id": 53,
+                    "type": "class",
+                    "slug": "basicregistry",
+                    "sources": [
+                      {
+                        "fileName": "module-registries/basic-registry.ts",
+                        "line": 4,
+                        "character": 34,
+                        "url": "https://github.com/asakusuma/glimmer-resolver/blob/aab5074/src/module-registries/basic-registry.ts#L4"
+                      }
+                    ],
+                    "parent": {
+                      "id": 0,
+                      "type": 0,
+                      "slug": "_glimmer_resolver"
+                    }
                   },
                   "isArray": false
                 },
@@ -478,6 +517,13 @@
         "alias": "resolver",
         "fullName": "Resolver",
         "hierarchy": "Class Resolver\n  Constructor constructor\n    ConstructorSignature new Resolver:Resolver\n      Parameter config:ResolverConfiguration\n      Parameter registry:ModuleRegistry\n  Property config:ResolverConfiguration\n  Property registry:ModuleRegistry\n  Method _definitiveCollection\n    CallSignature _definitiveCollection:string\n      Parameter type:string\n  Method _serializeAndVerify\n    CallSignature _serializeAndVerify:string\n      Parameter specifier:Specifier\n  Method identify\n    CallSignature identify:string\n      Parameter specifier:string\n      Parameter referrer:string\n  Method resolve\n    CallSignature resolve:any\n      Parameter specifier:string\n      Parameter referrer:string\n  Method retrieve\n    CallSignature retrieve:any\n      Parameter specifier:string",
+        "implementedTypes": [
+          {
+            "type": "reference",
+            "name": "Resolver",
+            "isArray": false
+          }
+        ],
         "sources": [
           {
             "fileName": "resolver.ts",
@@ -532,8 +578,22 @@
                   "type": "reference",
                   "name": "Resolver",
                   "reflection": {
-                    "id": "29",
-                    "type": "class"
+                    "id": 29,
+                    "type": "class",
+                    "slug": "resolver",
+                    "sources": [
+                      {
+                        "fileName": "resolver.ts",
+                        "line": 13,
+                        "character": 29,
+                        "url": "https://github.com/asakusuma/glimmer-resolver/blob/aab5074/src/resolver.ts#L13"
+                      }
+                    ],
+                    "parent": {
+                      "id": 0,
+                      "type": 0,
+                      "slug": "_glimmer_resolver"
+                    }
                   },
                   "isArray": false
                 },
@@ -553,8 +613,22 @@
                       "type": "reference",
                       "name": "ResolverConfiguration",
                       "reflection": {
-                        "id": "24",
-                        "type": "interface"
+                        "id": 24,
+                        "type": "interface",
+                        "slug": "resolverconfiguration",
+                        "sources": [
+                          {
+                            "fileName": "resolver-configuration.ts",
+                            "line": 45,
+                            "character": 38,
+                            "url": "https://github.com/asakusuma/glimmer-resolver/blob/aab5074/src/resolver-configuration.ts#L45"
+                          }
+                        ],
+                        "parent": {
+                          "id": 0,
+                          "type": 0,
+                          "slug": "_glimmer_resolver"
+                        }
                       },
                       "isArray": false
                     }
@@ -574,8 +648,22 @@
                       "type": "reference",
                       "name": "ModuleRegistry",
                       "reflection": {
-                        "id": "5",
-                        "type": "interface"
+                        "id": 5,
+                        "type": "interface",
+                        "slug": "moduleregistry",
+                        "sources": [
+                          {
+                            "fileName": "module-registry.ts",
+                            "line": 1,
+                            "character": 31,
+                            "url": "https://github.com/asakusuma/glimmer-resolver/blob/aab5074/src/module-registry.ts#L1"
+                          }
+                        ],
+                        "parent": {
+                          "id": 0,
+                          "type": 0,
+                          "slug": "_glimmer_resolver"
+                        }
                       },
                       "isArray": false
                     }
@@ -615,8 +703,22 @@
               "type": "reference",
               "name": "ResolverConfiguration",
               "reflection": {
-                "id": "24",
-                "type": "interface"
+                "id": 24,
+                "type": "interface",
+                "slug": "resolverconfiguration",
+                "sources": [
+                  {
+                    "fileName": "resolver-configuration.ts",
+                    "line": 45,
+                    "character": 38,
+                    "url": "https://github.com/asakusuma/glimmer-resolver/blob/aab5074/src/resolver-configuration.ts#L45"
+                  }
+                ],
+                "parent": {
+                  "id": 0,
+                  "type": 0,
+                  "slug": "_glimmer_resolver"
+                }
               },
               "isArray": false
             }
@@ -650,8 +752,22 @@
               "type": "reference",
               "name": "ModuleRegistry",
               "reflection": {
-                "id": "5",
-                "type": "interface"
+                "id": 5,
+                "type": "interface",
+                "slug": "moduleregistry",
+                "sources": [
+                  {
+                    "fileName": "module-registry.ts",
+                    "line": 1,
+                    "character": 31,
+                    "url": "https://github.com/asakusuma/glimmer-resolver/blob/aab5074/src/module-registry.ts#L1"
+                  }
+                ],
+                "parent": {
+                  "id": 0,
+                  "type": 0,
+                  "slug": "_glimmer_resolver"
+                }
               },
               "isArray": false
             }
@@ -1674,8 +1790,22 @@
               "type": "reference",
               "name": "PackageDefinition",
               "reflection": {
-                "id": "12",
-                "type": "interface"
+                "id": 12,
+                "type": "interface",
+                "slug": "packagedefinition",
+                "sources": [
+                  {
+                    "fileName": "resolver-configuration.ts",
+                    "line": 3,
+                    "character": 34,
+                    "url": "https://github.com/asakusuma/glimmer-resolver/blob/aab5074/src/resolver-configuration.ts#L3"
+                  }
+                ],
+                "parent": {
+                  "id": 0,
+                  "type": 0,
+                  "slug": "_glimmer_resolver"
+                }
               },
               "isArray": false
             }
@@ -1835,8 +1965,22 @@
                   "type": "reference",
                   "name": "Specifier",
                   "reflection": {
-                    "id": "250",
-                    "type": "interface"
+                    "id": 250,
+                    "type": "interface",
+                    "slug": "specifier",
+                    "sources": [
+                      {
+                        "fileName": "specifier.ts",
+                        "line": 1,
+                        "character": 26,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/specifier.ts#L1"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   },
                   "isArray": false
                 },
@@ -1906,8 +2050,22 @@
                   "type": "reference",
                   "name": "Owner",
                   "reflection": {
-                    "id": "229",
-                    "type": "interface"
+                    "id": 229,
+                    "type": "interface",
+                    "slug": "owner",
+                    "sources": [
+                      {
+                        "fileName": "owner.ts",
+                        "line": 15,
+                        "character": 22,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/owner.ts#L15"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   },
                   "isArray": false
                 },
@@ -1994,8 +2152,22 @@
                       "type": "reference",
                       "name": "Specifier",
                       "reflection": {
-                        "id": "250",
-                        "type": "interface"
+                        "id": 250,
+                        "type": "interface",
+                        "slug": "specifier",
+                        "sources": [
+                          {
+                            "fileName": "specifier.ts",
+                            "line": 1,
+                            "character": 26,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/specifier.ts#L1"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -2131,8 +2303,22 @@
                       "type": "reference",
                       "name": "Specifier",
                       "reflection": {
-                        "id": "250",
-                        "type": "interface"
+                        "id": 250,
+                        "type": "interface",
+                        "slug": "specifier",
+                        "sources": [
+                          {
+                            "fileName": "specifier.ts",
+                            "line": 1,
+                            "character": 26,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/specifier.ts#L1"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -2202,8 +2388,22 @@
                       "type": "reference",
                       "name": "Specifier",
                       "reflection": {
-                        "id": "250",
-                        "type": "interface"
+                        "id": 250,
+                        "type": "interface",
+                        "slug": "specifier",
+                        "sources": [
+                          {
+                            "fileName": "specifier.ts",
+                            "line": 1,
+                            "character": 26,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/specifier.ts#L1"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -2290,8 +2490,22 @@
                       "type": "reference",
                       "name": "Owner",
                       "reflection": {
-                        "id": "229",
-                        "type": "interface"
+                        "id": 229,
+                        "type": "interface",
+                        "slug": "owner",
+                        "sources": [
+                          {
+                            "fileName": "owner.ts",
+                            "line": 15,
+                            "character": 22,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/owner.ts#L15"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -2433,8 +2647,21 @@
                   "type": "reference",
                   "name": "Container",
                   "reflection": {
-                    "id": "204",
-                    "type": "class"
+                    "id": 204,
+                    "type": "class",
+                    "slug": "container",
+                    "sources": [
+                      {
+                        "fileName": "container.ts",
+                        "line": 6,
+                        "character": 30
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   },
                   "isArray": false
                 },
@@ -2454,8 +2681,22 @@
                       "type": "reference",
                       "name": "RegistryReader",
                       "reflection": {
-                        "id": "105",
-                        "type": "interface"
+                        "id": 105,
+                        "type": "interface",
+                        "slug": "registryreader",
+                        "sources": [
+                          {
+                            "fileName": "registry.ts",
+                            "line": 22,
+                            "character": 31,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L22"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -2476,8 +2717,22 @@
                       "type": "reference",
                       "name": "Resolver",
                       "reflection": {
-                        "id": "196",
-                        "type": "interface"
+                        "id": 196,
+                        "type": "interface",
+                        "slug": "resolver",
+                        "sources": [
+                          {
+                            "fileName": "resolver.ts",
+                            "line": 3,
+                            "character": 25,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/resolver.ts#L3"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -2579,8 +2834,22 @@
               "type": "reference",
               "name": "RegistryReader",
               "reflection": {
-                "id": "105",
-                "type": "interface"
+                "id": 105,
+                "type": "interface",
+                "slug": "registryreader",
+                "sources": [
+                  {
+                    "fileName": "registry.ts",
+                    "line": 22,
+                    "character": 31,
+                    "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L22"
+                  }
+                ],
+                "parent": {
+                  "id": 64,
+                  "type": 0,
+                  "slug": "_glimmer_di"
+                }
               },
               "isArray": false
             }
@@ -2614,8 +2883,22 @@
               "type": "reference",
               "name": "Resolver",
               "reflection": {
-                "id": "196",
-                "type": "interface"
+                "id": 196,
+                "type": "interface",
+                "slug": "resolver",
+                "sources": [
+                  {
+                    "fileName": "resolver.ts",
+                    "line": 3,
+                    "character": 25,
+                    "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/resolver.ts#L3"
+                  }
+                ],
+                "parent": {
+                  "id": 64,
+                  "type": 0,
+                  "slug": "_glimmer_di"
+                }
               },
               "isArray": false
             }
@@ -2672,8 +2955,22 @@
                     }
                   ],
                   "reflection": {
-                    "id": "70",
-                    "type": "interface"
+                    "id": 70,
+                    "type": "interface",
+                    "slug": "factory",
+                    "sources": [
+                      {
+                        "fileName": "factory.ts",
+                        "line": 5,
+                        "character": 24,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/factory.ts#L5"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   },
                   "isArray": false
                 },
@@ -2715,8 +3012,22 @@
                         }
                       ],
                       "reflection": {
-                        "id": "65",
-                        "type": "interface"
+                        "id": 65,
+                        "type": "interface",
+                        "slug": "factorydefinition",
+                        "sources": [
+                          {
+                            "fileName": "factory.ts",
+                            "line": 1,
+                            "character": 34,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/factory.ts#L1"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -2906,8 +3217,22 @@
                     }
                   ],
                   "reflection": {
-                    "id": "70",
-                    "type": "interface"
+                    "id": 70,
+                    "type": "interface",
+                    "slug": "factory",
+                    "sources": [
+                      {
+                        "fileName": "factory.ts",
+                        "line": 5,
+                        "character": 24,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/factory.ts#L5"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   },
                   "isArray": false
                 },
@@ -3020,6 +3345,31 @@
         "alias": "registry",
         "fullName": "Registry",
         "hierarchy": "Class Registry\n  Constructor constructor\n    ConstructorSignature new Registry:Registry\n  Property _registeredInjections:Dict\n  Property _registeredOptions:Dict\n  Property _registrations:Dict\n  Method register\n    CallSignature register:void\n      Parameter specifier:string\n      Parameter factoryDefinition:FactoryDefinition<any>\n      Parameter options:RegistrationOptions\n  Method registerInjection\n    CallSignature registerInjection:void\n      Parameter specifier:string\n      Parameter property:string\n      Parameter source:string\n  Method registerOption\n    CallSignature registerOption:void\n      Parameter specifier:string\n      Parameter option:string\n      Parameter value:any\n  Method registeredInjections\n    CallSignature registeredInjections:Injection[]\n      Parameter specifier:string\n  Method registeredOption\n    CallSignature registeredOption:any\n      Parameter specifier:string\n      Parameter option:string\n  Method registeredOptions\n    CallSignature registeredOptions:any\n      Parameter specifier:string\n  Method registration\n    CallSignature registration:FactoryDefinition<any>\n      Parameter specifier:string\n  Method unregister\n    CallSignature unregister:void\n      Parameter specifier:string\n  Method unregisterOption\n    CallSignature unregisterOption:void\n      Parameter specifier:string\n      Parameter option:string",
+        "implementedTypes": [
+          {
+            "type": "reference",
+            "name": "RegistryAccessor",
+            "reflection": {
+              "id": 119,
+              "type": "interface",
+              "slug": "registryaccessor",
+              "sources": [
+                {
+                  "fileName": "registry.ts",
+                  "line": 29,
+                  "character": 33,
+                  "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L29"
+                }
+              ],
+              "parent": {
+                "id": 64,
+                "type": 0,
+                "slug": "_glimmer_di"
+              }
+            },
+            "isArray": false
+          }
+        ],
         "sources": [
           {
             "fileName": "registry.ts",
@@ -3074,8 +3424,22 @@
                   "type": "reference",
                   "name": "Registry",
                   "reflection": {
-                    "id": "155",
-                    "type": "class"
+                    "id": 155,
+                    "type": "class",
+                    "slug": "registry",
+                    "sources": [
+                      {
+                        "fileName": "registry.ts",
+                        "line": 31,
+                        "character": 29,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L31"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   },
                   "isArray": false
                 }
@@ -3265,8 +3629,22 @@
                         }
                       ],
                       "reflection": {
-                        "id": "65",
-                        "type": "interface"
+                        "id": 65,
+                        "type": "interface",
+                        "slug": "factorydefinition",
+                        "sources": [
+                          {
+                            "fileName": "factory.ts",
+                            "line": 1,
+                            "character": 34,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/factory.ts#L1"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -3287,8 +3665,22 @@
                       "type": "reference",
                       "name": "RegistrationOptions",
                       "reflection": {
-                        "id": "76",
-                        "type": "interface"
+                        "id": 76,
+                        "type": "interface",
+                        "slug": "registrationoptions",
+                        "sources": [
+                          {
+                            "fileName": "registry.ts",
+                            "line": 4,
+                            "character": 36,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L4"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -3539,8 +3931,22 @@
                   "isArray": true,
                   "name": "Injection",
                   "reflection": {
-                    "id": "79",
-                    "type": "interface"
+                    "id": 79,
+                    "type": "interface",
+                    "slug": "injection",
+                    "sources": [
+                      {
+                        "fileName": "registry.ts",
+                        "line": 9,
+                        "character": 26,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L9"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   }
                 },
                 "parameters": [
@@ -3763,8 +4169,22 @@
                     }
                   ],
                   "reflection": {
-                    "id": "65",
-                    "type": "interface"
+                    "id": 65,
+                    "type": "interface",
+                    "slug": "factorydefinition",
+                    "sources": [
+                      {
+                        "fileName": "factory.ts",
+                        "line": 1,
+                        "character": 34,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/factory.ts#L1"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   },
                   "isArray": false
                 },
@@ -4015,8 +4435,22 @@
                 }
               ],
               "reflection": {
-                "id": "65",
-                "type": "interface"
+                "id": 65,
+                "type": "interface",
+                "slug": "factorydefinition",
+                "sources": [
+                  {
+                    "fileName": "factory.ts",
+                    "line": 1,
+                    "character": 34,
+                    "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/factory.ts#L1"
+                  }
+                ],
+                "parent": {
+                  "id": 64,
+                  "type": 0,
+                  "slug": "_glimmer_di"
+                }
               },
               "isArray": false
             }
@@ -4379,8 +4813,22 @@
                     }
                   ],
                   "reflection": {
-                    "id": "70",
-                    "type": "interface"
+                    "id": 70,
+                    "type": "interface",
+                    "slug": "factory",
+                    "sources": [
+                      {
+                        "fileName": "factory.ts",
+                        "line": 5,
+                        "character": 24,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/factory.ts#L5"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   },
                   "isArray": false
                 },
@@ -4707,6 +5155,54 @@
         "alias": "registryaccessor",
         "fullName": "RegistryAccessor",
         "hierarchy": "Interface RegistryAccessor\n  Method register\n    CallSignature register:void\n      Parameter specifier:string\n      Parameter factory:any\n      Parameter options:RegistrationOptions\n  Method registerInjection\n    CallSignature registerInjection:void\n      Parameter specifier:string\n      Parameter property:string\n      Parameter source:string\n  Method registerOption\n    CallSignature registerOption:void\n      Parameter specifier:string\n      Parameter option:string\n      Parameter value:any\n  Method registeredInjections\n    CallSignature registeredInjections:Injection[]\n      Parameter specifier:string\n  Method registeredOption\n    CallSignature registeredOption:any\n      Parameter specifier:string\n      Parameter option:string\n  Method registeredOptions\n    CallSignature registeredOptions:any\n      Parameter specifier:string\n  Method registration\n    CallSignature registration:any\n      Parameter specifier:string\n  Method unregister\n    CallSignature unregister:void\n      Parameter specifier:string\n  Method unregisterOption\n    CallSignature unregisterOption:void\n      Parameter specifier:string\n      Parameter option:string",
+        "extendedTypes": [
+          {
+            "type": "reference",
+            "name": "RegistryReader",
+            "reflection": {
+              "id": 105,
+              "type": "interface",
+              "slug": "registryreader",
+              "sources": [
+                {
+                  "fileName": "registry.ts",
+                  "line": 22,
+                  "character": 31,
+                  "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L22"
+                }
+              ],
+              "parent": {
+                "id": 64,
+                "type": 0,
+                "slug": "_glimmer_di"
+              }
+            },
+            "isArray": false
+          },
+          {
+            "type": "reference",
+            "name": "RegistryWriter",
+            "reflection": {
+              "id": 82,
+              "type": "interface",
+              "slug": "registrywriter",
+              "sources": [
+                {
+                  "fileName": "registry.ts",
+                  "line": 14,
+                  "character": 31,
+                  "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L14"
+                }
+              ],
+              "parent": {
+                "id": 64,
+                "type": 0,
+                "slug": "_glimmer_di"
+              }
+            },
+            "isArray": false
+          }
+        ],
         "sources": [
           {
             "fileName": "registry.ts",
@@ -4810,8 +5306,22 @@
                       "type": "reference",
                       "name": "RegistrationOptions",
                       "reflection": {
-                        "id": "76",
-                        "type": "interface"
+                        "id": 76,
+                        "type": "interface",
+                        "slug": "registrationoptions",
+                        "sources": [
+                          {
+                            "fileName": "registry.ts",
+                            "line": 4,
+                            "character": 36,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L4"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -5062,8 +5572,22 @@
                   "isArray": true,
                   "name": "Injection",
                   "reflection": {
-                    "id": "79",
-                    "type": "interface"
+                    "id": 79,
+                    "type": "interface",
+                    "slug": "injection",
+                    "sources": [
+                      {
+                        "fileName": "registry.ts",
+                        "line": 9,
+                        "character": 26,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L9"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   }
                 },
                 "parameters": [
@@ -5528,8 +6052,22 @@
                   "isArray": true,
                   "name": "Injection",
                   "reflection": {
-                    "id": "79",
-                    "type": "interface"
+                    "id": 79,
+                    "type": "interface",
+                    "slug": "injection",
+                    "sources": [
+                      {
+                        "fileName": "registry.ts",
+                        "line": 9,
+                        "character": 26,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L9"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   }
                 },
                 "parameters": [
@@ -5894,8 +6432,22 @@
                       "type": "reference",
                       "name": "RegistrationOptions",
                       "reflection": {
-                        "id": "76",
-                        "type": "interface"
+                        "id": 76,
+                        "type": "interface",
+                        "slug": "registrationoptions",
+                        "sources": [
+                          {
+                            "fileName": "registry.ts",
+                            "line": 4,
+                            "character": 36,
+                            "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/registry.ts#L4"
+                          }
+                        ],
+                        "parent": {
+                          "id": 64,
+                          "type": 0,
+                          "slug": "_glimmer_di"
+                        }
                       },
                       "isArray": false
                     }
@@ -6415,8 +6967,22 @@
                     }
                   ],
                   "reflection": {
-                    "id": "65",
-                    "type": "interface"
+                    "id": 65,
+                    "type": "interface",
+                    "slug": "factorydefinition",
+                    "sources": [
+                      {
+                        "fileName": "factory.ts",
+                        "line": 1,
+                        "character": 34,
+                        "url": "https://github.com/glimmerjs/glimmer-di/blob/147ff23/src/factory.ts#L1"
+                      }
+                    ],
+                    "parent": {
+                      "id": 64,
+                      "type": 0,
+                      "slug": "_glimmer_di"
+                    }
                   },
                   "isArray": false
                 },

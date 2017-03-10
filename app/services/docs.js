@@ -94,8 +94,8 @@ export default Ember.Service.extend({
       const realId = this.main.data.attributes.idMap[projectId][moduleId];
       record = this.main.included.find(({ id }) => id === realId);
     }
-
-    return toInflatedViewObject(record);
+    const inflated = toInflatedViewObject(record);
+    return inflated;
   },
   fetchProject(projectId) {
     return toViewObject(this.main.included.find(({ type, id }) => type === 'projectdoc' && id === projectId));
