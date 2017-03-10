@@ -6,7 +6,7 @@
       "title": "GlimmerJS Docs",
       "intro": "Started at the bottom now we here",
       "idMap": {
-        "glimmer-resolver": {
+        "_glimmer_resolver": {
           "basicregistry": "53",
           "resolver": "29",
           "resolverconfiguration": "24",
@@ -15,7 +15,7 @@
           "moduletypedefinition": "16",
           "packagedefinition": "12"
         },
-        "glimmer-di": {
+        "_glimmer_di": {
           "container": "204",
           "registryreader": "105",
           "resolver": "196",
@@ -35,11 +35,11 @@
       "docmodules": {
         "data": [
           {
-            "id": "glimmer-resolver",
+            "id": "_glimmer_resolver",
             "type": "projectdoc"
           },
           {
-            "id": "glimmer-di",
+            "id": "_glimmer_di",
             "type": "projectdoc"
           }
         ]
@@ -48,11 +48,11 @@
   },
   "included": [
     {
-      "id": "glimmer-resolver",
+      "id": "_glimmer_resolver",
       "type": "projectdoc",
       "attributes": {
         "name": "@glimmer/resolver",
-        "slug": "glimmer-resolver",
+        "slug": "_glimmer_resolver",
         "flags": {
           "isNormalized": true
         },
@@ -88,7 +88,7 @@
             "callSignatures": [
               {
                 "name": "assert",
-                "slug": "assert",
+                "slug": "assert-1",
                 "flags": {},
                 "alias": "assert-1",
                 "fullName": "assert.assert",
@@ -241,7 +241,7 @@
             "constructorSignatures": [
               {
                 "name": "new BasicRegistry",
-                "slug": "new-basicregistry",
+                "slug": "new_basicregistry",
                 "flags": {},
                 "alias": "new_basicregistry",
                 "fullName": "BasicRegistry.constructor.new BasicRegistry",
@@ -350,7 +350,7 @@
             "callSignatures": [
               {
                 "name": "get",
-                "slug": "get",
+                "slug": "get-1",
                 "flags": {},
                 "alias": "get-1",
                 "fullName": "BasicRegistry.get.get",
@@ -416,7 +416,7 @@
             "callSignatures": [
               {
                 "name": "has",
-                "slug": "has",
+                "slug": "has-1",
                 "flags": {},
                 "alias": "has-1",
                 "fullName": "BasicRegistry.has.has",
@@ -436,7 +436,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -515,7 +515,7 @@
             "constructorSignatures": [
               {
                 "name": "new Resolver",
-                "slug": "new-resolver",
+                "slug": "new_resolver",
                 "flags": {},
                 "alias": "new_resolver",
                 "fullName": "Resolver.constructor.new Resolver",
@@ -588,7 +588,7 @@
         "properties": [
           {
             "name": "config",
-            "slug": "config",
+            "slug": "config-1",
             "flags": {
               "flags": 84,
               "isStatic": false,
@@ -623,7 +623,7 @@
           },
           {
             "name": "registry",
-            "slug": "registry",
+            "slug": "registry-1",
             "flags": {
               "flags": 84,
               "isStatic": false,
@@ -687,7 +687,7 @@
             "callSignatures": [
               {
                 "name": "_definitiveCollection",
-                "slug": "_definitivecollection",
+                "slug": "_definitivecollection-1",
                 "flags": {},
                 "alias": "_definitivecollection-1",
                 "fullName": "Resolver._definitiveCollection._definitiveCollection",
@@ -754,7 +754,7 @@
             "callSignatures": [
               {
                 "name": "_serializeAndVerify",
-                "slug": "_serializeandverify",
+                "slug": "_serializeandverify-1",
                 "flags": {},
                 "alias": "_serializeandverify-1",
                 "fullName": "Resolver._serializeAndVerify._serializeAndVerify",
@@ -821,7 +821,7 @@
             "callSignatures": [
               {
                 "name": "identify",
-                "slug": "identify",
+                "slug": "identify-1",
                 "flags": {},
                 "alias": "identify-1",
                 "fullName": "Resolver.identify.identify",
@@ -841,7 +841,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -904,7 +904,7 @@
             "callSignatures": [
               {
                 "name": "resolve",
-                "slug": "resolve",
+                "slug": "resolve-1",
                 "flags": {},
                 "alias": "resolve-1",
                 "fullName": "Resolver.resolve.resolve",
@@ -924,7 +924,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-2",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -940,7 +940,7 @@
                   },
                   {
                     "name": "referrer",
-                    "slug": "referrer",
+                    "slug": "referrer-1",
                     "flags": {
                       "0": "Optional",
                       "flags": 128,
@@ -987,7 +987,7 @@
             "callSignatures": [
               {
                 "name": "retrieve",
-                "slug": "retrieve",
+                "slug": "retrieve-1",
                 "flags": {},
                 "alias": "retrieve-1",
                 "fullName": "Resolver.retrieve.retrieve",
@@ -1007,7 +1007,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-3",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -1274,7 +1274,7 @@
             "callSignatures": [
               {
                 "name": "get",
-                "slug": "get",
+                "slug": "get-1",
                 "flags": {},
                 "alias": "get-1",
                 "fullName": "ModuleRegistry.get.get",
@@ -1340,7 +1340,7 @@
             "callSignatures": [
               {
                 "name": "has",
-                "slug": "has",
+                "slug": "has-1",
                 "flags": {},
                 "alias": "has-1",
                 "fullName": "ModuleRegistry.has.has",
@@ -1360,7 +1360,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -1746,11 +1746,11 @@
       }
     },
     {
-      "id": "glimmer-di",
+      "id": "_glimmer_di",
       "type": "projectdoc",
       "attributes": {
         "name": "@glimmer/di",
-        "slug": "glimmer-di",
+        "slug": "_glimmer_di",
         "flags": {
           "isNormalized": true
         },
@@ -1818,7 +1818,7 @@
             "callSignatures": [
               {
                 "name": "deserializeSpecifier",
-                "slug": "deserializespecifier",
+                "slug": "deserializespecifier-1",
                 "flags": {},
                 "alias": "deserializespecifier-1",
                 "fullName": "deserializeSpecifier.deserializeSpecifier",
@@ -1889,7 +1889,7 @@
             "callSignatures": [
               {
                 "name": "getOwner",
-                "slug": "getowner",
+                "slug": "getowner-1",
                 "flags": {},
                 "alias": "getowner-1",
                 "fullName": "getOwner.getOwner",
@@ -1961,7 +1961,7 @@
             "callSignatures": [
               {
                 "name": "isSpecifierObjectAbsolute",
-                "slug": "isspecifierobjectabsolute",
+                "slug": "isspecifierobjectabsolute-1",
                 "flags": {},
                 "alias": "isspecifierobjectabsolute-1",
                 "fullName": "isSpecifierObjectAbsolute.isSpecifierObjectAbsolute",
@@ -2032,7 +2032,7 @@
             "callSignatures": [
               {
                 "name": "isSpecifierStringAbsolute",
-                "slug": "isspecifierstringabsolute",
+                "slug": "isspecifierstringabsolute-1",
                 "flags": {},
                 "alias": "isspecifierstringabsolute-1",
                 "fullName": "isSpecifierStringAbsolute.isSpecifierStringAbsolute",
@@ -2098,7 +2098,7 @@
             "callSignatures": [
               {
                 "name": "serializeSpecifier",
-                "slug": "serializespecifier",
+                "slug": "serializespecifier-1",
                 "flags": {},
                 "alias": "serializespecifier-1",
                 "fullName": "serializeSpecifier.serializeSpecifier",
@@ -2169,7 +2169,7 @@
             "callSignatures": [
               {
                 "name": "serializeSpecifierPath",
-                "slug": "serializespecifierpath",
+                "slug": "serializespecifierpath-1",
                 "flags": {},
                 "alias": "serializespecifierpath-1",
                 "fullName": "serializeSpecifierPath.serializeSpecifierPath",
@@ -2240,7 +2240,7 @@
             "callSignatures": [
               {
                 "name": "setOwner",
-                "slug": "setowner",
+                "slug": "setowner-1",
                 "flags": {},
                 "alias": "setowner-1",
                 "fullName": "setOwner.setOwner",
@@ -2417,7 +2417,7 @@
             "constructorSignatures": [
               {
                 "name": "new Container",
-                "slug": "new-container",
+                "slug": "new_container",
                 "flags": {},
                 "alias": "new_container",
                 "fullName": "Container.constructor.new Container",
@@ -2650,7 +2650,7 @@
             "callSignatures": [
               {
                 "name": "buildFactory",
-                "slug": "buildfactory",
+                "slug": "buildfactory-1",
                 "flags": {},
                 "alias": "buildfactory-1",
                 "fullName": "Container.buildFactory.buildFactory",
@@ -2753,7 +2753,7 @@
             "callSignatures": [
               {
                 "name": "buildInjections",
-                "slug": "buildinjections",
+                "slug": "buildinjections-1",
                 "flags": {},
                 "alias": "buildinjections-1",
                 "fullName": "Container.buildInjections.buildInjections",
@@ -2773,7 +2773,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -2819,7 +2819,7 @@
             "callSignatures": [
               {
                 "name": "defaultInjections",
-                "slug": "defaultinjections",
+                "slug": "defaultinjections-1",
                 "flags": {},
                 "alias": "defaultinjections-1",
                 "fullName": "Container.defaultInjections.defaultInjections",
@@ -2839,7 +2839,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-2",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -2884,7 +2884,7 @@
             "callSignatures": [
               {
                 "name": "factoryFor",
-                "slug": "factoryfor",
+                "slug": "factoryfor-1",
                 "flags": {},
                 "alias": "factoryfor-1",
                 "fullName": "Container.factoryFor.factoryFor",
@@ -2914,7 +2914,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-3",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -2959,7 +2959,7 @@
             "callSignatures": [
               {
                 "name": "lookup",
-                "slug": "lookup",
+                "slug": "lookup-1",
                 "flags": {},
                 "alias": "lookup-1",
                 "fullName": "Container.lookup.lookup",
@@ -2978,7 +2978,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-4",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3057,7 +3057,7 @@
             "constructorSignatures": [
               {
                 "name": "new Registry",
-                "slug": "new-registry",
+                "slug": "new_registry",
                 "flags": {},
                 "alias": "new_registry",
                 "fullName": "Registry.constructor.new Registry",
@@ -3210,7 +3210,7 @@
             "callSignatures": [
               {
                 "name": "register",
-                "slug": "register",
+                "slug": "register-1",
                 "flags": {},
                 "alias": "register-1",
                 "fullName": "Registry.register.register",
@@ -3325,7 +3325,7 @@
             "callSignatures": [
               {
                 "name": "registerInjection",
-                "slug": "registerinjection",
+                "slug": "registerinjection-1",
                 "flags": {},
                 "alias": "registerinjection-1",
                 "fullName": "Registry.registerInjection.registerInjection",
@@ -3345,7 +3345,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3423,7 +3423,7 @@
             "callSignatures": [
               {
                 "name": "registerOption",
-                "slug": "registeroption",
+                "slug": "registeroption-1",
                 "flags": {},
                 "alias": "registeroption-1",
                 "fullName": "Registry.registerOption.registerOption",
@@ -3443,7 +3443,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-2",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3521,7 +3521,7 @@
             "callSignatures": [
               {
                 "name": "registeredInjections",
-                "slug": "registeredinjections",
+                "slug": "registeredinjections-1",
                 "flags": {},
                 "alias": "registeredinjections-1",
                 "fullName": "Registry.registeredInjections.registeredInjections",
@@ -3546,7 +3546,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-3",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3592,7 +3592,7 @@
             "callSignatures": [
               {
                 "name": "registeredOption",
-                "slug": "registeredoption",
+                "slug": "registeredoption-1",
                 "flags": {},
                 "alias": "registeredoption-1",
                 "fullName": "Registry.registeredOption.registeredOption",
@@ -3612,7 +3612,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-4",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3628,7 +3628,7 @@
                   },
                   {
                     "name": "option",
-                    "slug": "option",
+                    "slug": "option-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3674,7 +3674,7 @@
             "callSignatures": [
               {
                 "name": "registeredOptions",
-                "slug": "registeredoptions",
+                "slug": "registeredoptions-1",
                 "flags": {},
                 "alias": "registeredoptions-1",
                 "fullName": "Registry.registeredOptions.registeredOptions",
@@ -3694,7 +3694,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-5",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3740,7 +3740,7 @@
             "callSignatures": [
               {
                 "name": "registration",
-                "slug": "registration",
+                "slug": "registration-1",
                 "flags": {},
                 "alias": "registration-1",
                 "fullName": "Registry.registration.registration",
@@ -3771,7 +3771,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-6",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3817,7 +3817,7 @@
             "callSignatures": [
               {
                 "name": "unregister",
-                "slug": "unregister",
+                "slug": "unregister-1",
                 "flags": {},
                 "alias": "unregister-1",
                 "fullName": "Registry.unregister.unregister",
@@ -3837,7 +3837,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-7",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3883,7 +3883,7 @@
             "callSignatures": [
               {
                 "name": "unregisterOption",
-                "slug": "unregisteroption",
+                "slug": "unregisteroption-1",
                 "flags": {},
                 "alias": "unregisteroption-1",
                 "fullName": "Registry.unregisterOption.unregisterOption",
@@ -3903,7 +3903,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-8",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -3919,7 +3919,7 @@
                   },
                   {
                     "name": "option",
-                    "slug": "option",
+                    "slug": "option-2",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -4051,7 +4051,7 @@
             "callSignatures": [
               {
                 "name": "create",
-                "slug": "create",
+                "slug": "create-1",
                 "flags": {},
                 "alias": "create-1",
                 "fullName": "Factory.create.create",
@@ -4162,7 +4162,7 @@
             "callSignatures": [
               {
                 "name": "create",
-                "slug": "create",
+                "slug": "create-1",
                 "flags": {},
                 "alias": "create-1",
                 "fullName": "FactoryDefinition.create.create",
@@ -4356,7 +4356,7 @@
             "callSignatures": [
               {
                 "name": "factoryFor",
-                "slug": "factoryfor",
+                "slug": "factoryfor-1",
                 "flags": {},
                 "alias": "factoryfor-1",
                 "fullName": "Owner.factoryFor.factoryFor",
@@ -4450,7 +4450,7 @@
             "callSignatures": [
               {
                 "name": "identify",
-                "slug": "identify",
+                "slug": "identify-1",
                 "flags": {},
                 "alias": "identify-1",
                 "fullName": "Owner.identify.identify",
@@ -4470,7 +4470,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -4486,7 +4486,7 @@
                   },
                   {
                     "name": "referrer",
-                    "slug": "referrer",
+                    "slug": "referrer-1",
                     "flags": {
                       "0": "Optional",
                       "flags": 128,
@@ -4533,7 +4533,7 @@
             "callSignatures": [
               {
                 "name": "lookup",
-                "slug": "lookup",
+                "slug": "lookup-1",
                 "flags": {},
                 "alias": "lookup-1",
                 "fullName": "Owner.lookup.lookup",
@@ -4553,7 +4553,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-2",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -4569,7 +4569,7 @@
                   },
                   {
                     "name": "referrer",
-                    "slug": "referrer",
+                    "slug": "referrer-2",
                     "flags": {
                       "0": "Optional",
                       "flags": 128,
@@ -4744,7 +4744,7 @@
             "callSignatures": [
               {
                 "name": "register",
-                "slug": "register",
+                "slug": "register-1",
                 "flags": {},
                 "alias": "register-1",
                 "fullName": "RegistryAccessor.register.register",
@@ -4848,7 +4848,7 @@
             "callSignatures": [
               {
                 "name": "registerInjection",
-                "slug": "registerinjection",
+                "slug": "registerinjection-1",
                 "flags": {},
                 "alias": "registerinjection-1",
                 "fullName": "RegistryAccessor.registerInjection.registerInjection",
@@ -4868,7 +4868,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -4946,7 +4946,7 @@
             "callSignatures": [
               {
                 "name": "registerOption",
-                "slug": "registeroption",
+                "slug": "registeroption-1",
                 "flags": {},
                 "alias": "registeroption-1",
                 "fullName": "RegistryAccessor.registerOption.registerOption",
@@ -4966,7 +4966,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-2",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5044,7 +5044,7 @@
             "callSignatures": [
               {
                 "name": "registeredInjections",
-                "slug": "registeredinjections",
+                "slug": "registeredinjections-1",
                 "flags": {},
                 "alias": "registeredinjections-1",
                 "fullName": "RegistryAccessor.registeredInjections.registeredInjections",
@@ -5069,7 +5069,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-3",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5115,7 +5115,7 @@
             "callSignatures": [
               {
                 "name": "registeredOption",
-                "slug": "registeredoption",
+                "slug": "registeredoption-1",
                 "flags": {},
                 "alias": "registeredoption-1",
                 "fullName": "RegistryAccessor.registeredOption.registeredOption",
@@ -5135,7 +5135,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-4",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5151,7 +5151,7 @@
                   },
                   {
                     "name": "option",
-                    "slug": "option",
+                    "slug": "option-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5197,7 +5197,7 @@
             "callSignatures": [
               {
                 "name": "registeredOptions",
-                "slug": "registeredoptions",
+                "slug": "registeredoptions-1",
                 "flags": {},
                 "alias": "registeredoptions-1",
                 "fullName": "RegistryAccessor.registeredOptions.registeredOptions",
@@ -5217,7 +5217,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-5",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5263,7 +5263,7 @@
             "callSignatures": [
               {
                 "name": "registration",
-                "slug": "registration",
+                "slug": "registration-1",
                 "flags": {},
                 "alias": "registration-1",
                 "fullName": "RegistryAccessor.registration.registration",
@@ -5283,7 +5283,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-6",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5329,7 +5329,7 @@
             "callSignatures": [
               {
                 "name": "unregister",
-                "slug": "unregister",
+                "slug": "unregister-1",
                 "flags": {},
                 "alias": "unregister-1",
                 "fullName": "RegistryAccessor.unregister.unregister",
@@ -5349,7 +5349,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-7",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5395,7 +5395,7 @@
             "callSignatures": [
               {
                 "name": "unregisterOption",
-                "slug": "unregisteroption",
+                "slug": "unregisteroption-1",
                 "flags": {},
                 "alias": "unregisteroption-1",
                 "fullName": "RegistryAccessor.unregisterOption.unregisterOption",
@@ -5415,7 +5415,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-8",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5431,7 +5431,7 @@
                   },
                   {
                     "name": "option",
-                    "slug": "option",
+                    "slug": "option-2",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5510,7 +5510,7 @@
             "callSignatures": [
               {
                 "name": "registeredInjections",
-                "slug": "registeredinjections",
+                "slug": "registeredinjections-1",
                 "flags": {},
                 "alias": "registeredinjections-1",
                 "fullName": "RegistryReader.registeredInjections.registeredInjections",
@@ -5581,7 +5581,7 @@
             "callSignatures": [
               {
                 "name": "registeredOption",
-                "slug": "registeredoption",
+                "slug": "registeredoption-1",
                 "flags": {},
                 "alias": "registeredoption-1",
                 "fullName": "RegistryReader.registeredOption.registeredOption",
@@ -5601,7 +5601,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5663,7 +5663,7 @@
             "callSignatures": [
               {
                 "name": "registeredOptions",
-                "slug": "registeredoptions",
+                "slug": "registeredoptions-1",
                 "flags": {},
                 "alias": "registeredoptions-1",
                 "fullName": "RegistryReader.registeredOptions.registeredOptions",
@@ -5683,7 +5683,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-2",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5729,7 +5729,7 @@
             "callSignatures": [
               {
                 "name": "registration",
-                "slug": "registration",
+                "slug": "registration-1",
                 "flags": {},
                 "alias": "registration-1",
                 "fullName": "RegistryReader.registration.registration",
@@ -5749,7 +5749,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-3",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -5828,7 +5828,7 @@
             "callSignatures": [
               {
                 "name": "register",
-                "slug": "register",
+                "slug": "register-1",
                 "flags": {},
                 "alias": "register-1",
                 "fullName": "RegistryWriter.register.register",
@@ -5932,7 +5932,7 @@
             "callSignatures": [
               {
                 "name": "registerInjection",
-                "slug": "registerinjection",
+                "slug": "registerinjection-1",
                 "flags": {},
                 "alias": "registerinjection-1",
                 "fullName": "RegistryWriter.registerInjection.registerInjection",
@@ -5952,7 +5952,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -6030,7 +6030,7 @@
             "callSignatures": [
               {
                 "name": "registerOption",
-                "slug": "registeroption",
+                "slug": "registeroption-1",
                 "flags": {},
                 "alias": "registeroption-1",
                 "fullName": "RegistryWriter.registerOption.registerOption",
@@ -6050,7 +6050,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-2",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -6128,7 +6128,7 @@
             "callSignatures": [
               {
                 "name": "unregister",
-                "slug": "unregister",
+                "slug": "unregister-1",
                 "flags": {},
                 "alias": "unregister-1",
                 "fullName": "RegistryWriter.unregister.unregister",
@@ -6148,7 +6148,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-3",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -6194,7 +6194,7 @@
             "callSignatures": [
               {
                 "name": "unregisterOption",
-                "slug": "unregisteroption",
+                "slug": "unregisteroption-1",
                 "flags": {},
                 "alias": "unregisteroption-1",
                 "fullName": "RegistryWriter.unregisterOption.unregisterOption",
@@ -6214,7 +6214,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-4",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -6230,7 +6230,7 @@
                   },
                   {
                     "name": "option",
-                    "slug": "option",
+                    "slug": "option-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
@@ -6309,7 +6309,7 @@
             "callSignatures": [
               {
                 "name": "identify",
-                "slug": "identify",
+                "slug": "identify-1",
                 "flags": {},
                 "alias": "identify-1",
                 "fullName": "Resolver.identify.identify",
@@ -6392,7 +6392,7 @@
             "callSignatures": [
               {
                 "name": "retrieve",
-                "slug": "retrieve",
+                "slug": "retrieve-1",
                 "flags": {},
                 "alias": "retrieve-1",
                 "fullName": "Resolver.retrieve.retrieve",
@@ -6423,7 +6423,7 @@
                 "parameters": [
                   {
                     "name": "specifier",
-                    "slug": "specifier",
+                    "slug": "specifier-1",
                     "flags": {
                       "flags": 0,
                       "isOptional": false,
