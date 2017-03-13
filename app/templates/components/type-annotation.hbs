@@ -1,5 +1,5 @@
-{{#if type.reflection}}
-  {{#link-to "project.module" type.reflection.parent.slug type.reflection.slug}}{{type.name}}{{/link-to}}
+{{#if type.link}}
+  {{#link-to "project.module" type.link.parent.slug type.link.slug}}{{type.name}}{{/link-to}}
 {{else}}
   {{type.name}}
 {{/if}}
