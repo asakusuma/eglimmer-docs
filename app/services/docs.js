@@ -23,15 +23,38 @@ function toInflatedViewObject(obj) {
   return _toViewObject(obj, true);
 }
 
+function flagsMap(thing) {
+  let { flags } = thing;
+  if (flags) {
+    if (!flags.isPrivate && !flags.isProtected) {
+      flags.isPublic = true;
+    }
+  }
+  return thing;
+}
+
+function signatureMap(signature) {
+  signature.hasBody = signature.comment || signature.parameters;
+  return signature;
+}
+
 function addViewMeta(attributes) {
+  if (attributes.properties) {
+    flagsMap(attributes.properties);
+  }
   if (attributes.methods) {
     attributes.methods = attributes.methods.map((method) => {
+      flagsMap(method);
       if (method.callSignatures) {
-        method.callSignatures = method.callSignatures.map((signature) => {
-          signature.hasBody = signature.comment || signature.parameters;
-          console.log(signature.parameters);
-          return signature;
-        });
+        method.signatures = method.callSignatures.map(signatureMap);
+      }
+      return method;
+    });
+  }
+  if (attributes.constructors) {
+    attributes.constructors = attributes.constructors.map((method) => {
+      if (method.constructorSignatures) {
+        method.signatures = method.constructorSignatures.map(signatureMap);
       }
       return method;
     });
@@ -57,6 +80,7 @@ function _toViewObject({ type, id, attributes, relationships }, recurse = false)
     let relationship = relationships[key];
     viewObject[key] = recurse ? relationship.data.map(toInflatedViewObject) : relationship.data;
   }
+  console.log(viewObject);
   return viewObject;
 }
 

@@ -42,6 +42,13 @@ html,
   flex: 1;
 }
 
+.sources {
+  color: $aux-gray;
+  a {
+    color: $copy-four;
+  }
+}
+
 .method-signature, .property-definition {
   padding: 10px 0px;
   font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
@@ -87,6 +94,7 @@ html,
 }
 
 .property-definition {
+  display: block;
   h5 {
     color: $copy-three;
   }
@@ -101,6 +109,12 @@ html,
   }
   h5::before {
     content: "method";
+  }
+}
+
+.constructors .method-signature {
+  h5::before {
+    content: "";
   }
 }
 
@@ -156,7 +170,10 @@ html,
 
 #menu-container {
   border-right: 1px solid #DDD;
-  flex: 1;
+  flex-basis: auto; /* default value */
+  flex-grow: 1;
+  min-width: 180px;
+  max-width: 300px;
   font-size: 120%;
   bottom: 0px;
   top: 0px;
@@ -228,8 +245,11 @@ strong.sub {
   }
   p {
     margin: 0px;
-    padding: 2px 8px;
     color: $medium-gray;
+    padding: 16px 20px 16px 8px;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 90%;
+    line-height: 1.8em;
   }
 }
 
@@ -247,4 +267,27 @@ strong.sub {
 
 .property-title-container {
   display: flex;
+}
+
+.hierarchy-meta {
+  strong {
+    font-size: 100%;
+  }
+  div::after {
+    content: ","
+  }
+  div:last-child::after {
+    content: ""
+  }
+  margin: 16px 0px;
+  .type, div {
+    display:inline;
+  }
+}
+
+.access {
+  color: $medium-gray;
+  margin: 10px 0px 0px 0px;
+  font-size: 90%;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
 }

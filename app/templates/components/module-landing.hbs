@@ -1,56 +1,42 @@
 <h5>{{project.name}}</h5>
-<h3>{{module.name}}</h3>
+<div class="module-header">
+  <h3>{{module.name}}</h3>
+</div>
+{{#if module.sources}}
+  {{source-link sources=module.sources}}
+{{/if}}
+{{#if module.extendedTypes}}
+  <div class="hierarchy-meta">
+  <strong>Extends</strong>
+  {{#each module.extendedTypes as |extends|}}
+    {{type-annotation type=extends}}
+  {{/each}}
+  </div>
+{{/if}}
+
+{{#if module.implementedTypes}}
+  <div class="hierarchy-meta">
+  <strong>Implements</strong>
+  {{#each module.implementedTypes as |implements|}}
+    {{type-annotation type=implements}}
+  {{/each}}
+  </div>
+{{/if}}
 
 {{#if module.comment}}
   <p>{{module.comment.text}}</p>
 {{/if}}
 
+{{#if module.constructors}}
+  <div class="constructors">
+    <strong>Constructor</strong>
+    {{function-list functions=module.constructors}}
+  </div>
+{{/if}}
+
 {{#if module.methods}}
-<strong>Methods</strong>
-<ul class="methods-list">
-{{#each module.methods as |method|}}
-  <li>
-    {{#each method.callSignatures as |signature|}}
-    <ol class="signatures-list">
-      <li>
-        <div class="method-signature">
-          <h5>{{method.name}}</h5>
-          <ol class="parameters">
-            {{#if signature.parameters}}
-              {{#each signature.parameters as |param|}}
-                <li>
-                  <div class="param-name">{{param.name}}</div>
-                </li>
-              {{/each}}
-            {{/if}}
-          </ol>
-          <div class="return-type">
-            {{type-annotation type=signature.type}}
-          </div>
-        </div>
-        {{#if signature.hasBody}}
-          <div class="method-body">
-            {{#if signature.parameters}}
-            <strong class="sub">Arguments</strong>
-            <ol class="parameters-list">
-              {{#each signature.parameters as |param|}}
-              <li>
-                {{param.name}}: {{type-annotation type=param.type}}
-              </li>
-              {{/each}}
-            </ol>
-            {{/if}}
-            {{#if signature.comment}}
-              <p>{{signature.comment.text}}</p>
-            {{/if}}
-          </div>
-        {{/if}}
-      </li>
-    </ol>
-    {{/each}}
-  </li>
-{{/each}}
-</ul>
+  <strong>Methods</strong>
+  {{function-list functions=module.methods}}
 {{/if}}
 
 {{#if module.properties}}
