@@ -25,8 +25,8 @@ html,
 #column-container {
     flex: 1;
 }
-#column-container div {
-    overflow: scroll;
+#column-container > div {
+    overflow-y: auto;
 }
 
 #app-container {
@@ -34,8 +34,8 @@ html,
 }
 
 #menu-container {
-  flex: 1;
   border-right: 1px solid #DDD;
+  flex: 1;
   font-size: 120%;
   bottom: 0px;
   top: 0px;
@@ -67,7 +67,6 @@ html,
 #content-container {
   bottom: 0px;
   top: 0px;
-  overflow-y: scroll;
   padding: 10px 20px;
   background-color: #FFF;
   flex: 3;
@@ -82,7 +81,6 @@ strong {
 @mixin item-list($color) {
   padding: 0px;
   margin: 0px 0px 0px 0px;
-  border-left: 3px solid $color;
   li {
     list-style: none;
   }
