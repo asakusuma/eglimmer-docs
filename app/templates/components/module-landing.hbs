@@ -14,23 +14,36 @@
     <ol class="signatures-list">
       <li>
         <div class="method-signature">
-        <h5>{{method.name}}</h5>
-        <ol class="parameters-list">
-        {{#if signature.parameters}}
-          {{#each signature.parameters as |param|}}
-            <li>
-              <div class="param-name">{{param.name}}: </div>
-              <div class="param-type">{{type-annotation type=param.type}}</div>
-            </li>
-          {{/each}}
-        {{/if}}
-        </ol>
-        <div class="return-type">
-          {{type-annotation type=signature.type}}
+          <h5>{{method.name}}</h5>
+          <ol class="parameters">
+            {{#if signature.parameters}}
+              {{#each signature.parameters as |param|}}
+                <li>
+                  <div class="param-name">{{param.name}}</div>
+                </li>
+              {{/each}}
+            {{/if}}
+          </ol>
+          <div class="return-type">
+            {{type-annotation type=signature.type}}
+          </div>
         </div>
-        </div>
-        {{#if signature.comment}}
-          <p>{{signature.comment.text}}</p>
+        {{#if signature.hasBody}}
+          <div class="method-body">
+            {{#if signature.parameters}}
+            <strong class="sub">Arguments</strong>
+            <ol class="parameters-list">
+              {{#each signature.parameters as |param|}}
+              <li>
+                {{param.name}}: {{type-annotation type=param.type}}
+              </li>
+              {{/each}}
+            </ol>
+            {{/if}}
+            {{#if signature.comment}}
+              <p>{{signature.comment.text}}</p>
+            {{/if}}
+          </div>
         {{/if}}
       </li>
     </ol>
@@ -44,7 +57,7 @@
 <strong>Properties</strong>
 <ul class="properties-list">
 {{#each module.properties as |property|}}
-  <li>
+  <li class="property-definition">
     <div class="property-title-container">
       <h5>{{property.name}}</h5>
       <div class="property-type">{{type-annotation type=property.type}}</div>

@@ -23,6 +23,22 @@ function toInflatedViewObject(obj) {
   return _toViewObject(obj, true);
 }
 
+function addViewMeta(attributes) {
+  if (attributes.methods) {
+    attributes.methods = attributes.methods.map((method) => {
+      if (method.callSignatures) {
+        method.callSignatures = method.callSignatures.map((signature) => {
+          signature.hasBody = signature.comment || signature.parameters;
+          console.log(signature.parameters);
+          return signature;
+        });
+      }
+      return method;
+    });
+  }
+  return attributes;
+}
+
 function _toViewObject({ type, id, attributes, relationships }, recurse = false) {
   const identifier = {
     type,
@@ -30,7 +46,7 @@ function _toViewObject({ type, id, attributes, relationships }, recurse = false)
   };
   let viewObject = identifier;
   if (!attributes) {
-    attributes = materialize(identifier).attributes;
+    attributes = addViewMeta(materialize(identifier).attributes);
   }
 
   for (let key in attributes) {

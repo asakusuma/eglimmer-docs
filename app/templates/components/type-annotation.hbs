@@ -1,5 +1,6 @@
 {{#if type.link}}
-  {{#link-to "project.module" type.link.parent.slug type.link.slug}}{{type.name}}{{/link-to}}
+  {{#link-to "project.module" type.link.parent.slug type.link.slug class="type"}}{{type.name}}{{/link-to}}
 {{else}}
-  {{type.name}}
+  <span class="type">{{type.name}}</span>
 {{/if}}
+{{#if type.isArray}}<span class="isArray">[]</span>{{/if}}
