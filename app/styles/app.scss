@@ -1,6 +1,11 @@
 @import "normalize";
 @import "basic";
 
+$copy-one: #AA4639;
+$copy-two: #AA8139;
+$copy-three: #2C4770;
+$copy-four: #2A7F41;
+
 #top-menu {
   h1 {
     font-size: 100%;
@@ -31,6 +36,65 @@ html,
 
 #app-container {
   flex: 1;
+}
+
+.method-signature {
+  padding: 10px 0px;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  display: flex;
+  font-size: 100%;
+  h5 {
+    font-size: 100%;
+  }
+  ol, li {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+.parameters-list {
+  display: flex;
+  margin: 0px 4px;
+  li {
+    padding: 0px 4px;
+    display: flex;
+  }
+}
+
+.parameters-list::after {
+  font-size: 110%;
+  color: $copy-one;
+  content: ")";
+}
+
+.parameters-list::before {
+  font-size: 110%;
+  color: $copy-one;
+  content: "(";
+}
+
+.param-name {
+  color: #666;
+}
+
+.return-type {
+  margin-left: 4px;
+  color: $copy-four;
+  a {
+    color: $copy-four;
+  }
+}
+
+.return-type > div::before {
+  content: "->";
+}
+
+.param-type {
+  margin-left: 4px;
+  color: #6987C9;
+  a {
+    color: #6987C9;
+  }
 }
 
 #menu-container {
@@ -86,7 +150,7 @@ strong {
   }
   h5 {
     margin: 0px 0px 4px 4px;
-    color: #9E2B25;
+    color: $copy-one;
   }
   p {
     margin: 0px;
@@ -100,53 +164,6 @@ strong {
   >li {
     border-top: 1px solid #F3F3F3;
     margin-bottom: 8px;
-  }
-}
-
-.signatures-list {
-  >li {
-    display: flex;
-  }
-}
-
-.parameters-list {
-  display: flex;
-  margin: 2px 10px;
-  li {
-    padding: 0px 6px;
-    display: flex;
-  }
-}
-
-.parameters-list::after {
-  content: ")";
-}
-
-.parameters-list::before {
-  content: "(";
-}
-
-.param-name {
-  color: #666;
-}
-
-.return-type {
-  margin-left: 4px;
-  color: #3E5622;
-  a {
-    color: #3E5622;
-  }
-}
-
-.return-type > div::before {
-  content: "->";
-}
-
-.param-type {
-  margin-left: 4px;
-  color: #6987C9;
-  a {
-    color: #6987C9;
   }
 }
 

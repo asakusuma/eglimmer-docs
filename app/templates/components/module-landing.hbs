@@ -13,21 +13,21 @@
     {{#each method.callSignatures as |signature|}}
     <ol class="signatures-list">
       <li>
+        <div class="method-signature">
         <h5>{{method.name}}</h5>
-        <div class="parameters-container">
+        <ol class="parameters-list">
         {{#if signature.parameters}}
-          <ol class="parameters-list">
           {{#each signature.parameters as |param|}}
             <li>
               <div class="param-name">{{param.name}}: </div>
               <div class="param-type">{{type-annotation type=param.type}}</div>
             </li>
           {{/each}}
-          </ol>
         {{/if}}
-        </div>
+        </ol>
         <div class="return-type">
           {{type-annotation type=signature.type}}
+        </div>
         </div>
         {{#if signature.comment}}
           <p>{{signature.comment.text}}</p>
