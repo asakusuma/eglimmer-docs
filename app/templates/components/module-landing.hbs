@@ -37,23 +37,10 @@
 
   {{#if module.methods}}
     <strong>Methods</strong>
-    {{function-list functions=module.methods}}
+    {{method-list methods=module.methods}}
   {{/if}}
 
   {{#if module.properties}}
-  <strong>Properties</strong>
-  <ul class="properties-list">
-  {{#each module.properties as |property|}}
-    <li class="property-definition">
-      <div class="property-title-container">
-        <h5>{{property.name}}</h5>
-        <div class="property-type">{{type-annotation type=property.type}}</div>
-      </div>
-      {{#if property.comment}}
-        <p>{{property.comment.text}}</p>
-      {{/if}}
-    </li>
-  {{/each}}
-  </ul>
+    {{variable-list label="Properties" variables=module.properties}}
   {{/if}}
 </section>

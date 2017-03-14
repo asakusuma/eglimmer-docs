@@ -109,10 +109,16 @@ html,
   }
 }
 
-.method-signature {
+.signatures-list .method-signature {
   h5 {
     color: $copy-one;
   }
+  h5::before {
+    content: "function";
+  }
+}
+
+.methods-list .signatures-list .method-signature {
   h5::before {
     content: "method";
   }
@@ -235,8 +241,7 @@ section.content-container:first-child {
   pre {
     position: relative;
     padding: 16px 20px;
-    background-color: #333;
-    color: #EEE;
+    background-color: #f6f8fa;
   }
 }
 
@@ -257,16 +262,11 @@ strong.sub {
   color: $aux-gray;
 }
 
-@mixin item-list($color) {
+@mixin core-list {
   padding: 0px;
   margin: 0px 0px 0px 0px;
   li {
     list-style: none;
-  }
-  >li {
-    margin-top: 20px;
-    border-top: 1px solid #F3F3F3;
-    margin-bottom: 8px;
   }
   h5 {
     font-size: 100%;
@@ -283,12 +283,25 @@ strong.sub {
   }
 }
 
+@mixin item-list() {
+  >li {
+    margin-top: 20px;
+    border-top: 1px solid #F3F3F3;
+    margin-bottom: 8px;
+  }
+  @include core-list();
+}
+
+.signatures-list {
+  @include core-list();
+}
+
 .methods-list {
-  @include item-list(#F3F3F3);
+  @include item-list();
 }
 
 .properties-list {
-  @include item-list(#F3F3F3);
+  @include item-list();
   >li {
     border-top: 1px solid #F3F3F3;
     margin-bottom: 8px;

@@ -1,55 +1,49 @@
-<ul class="methods-list">
-{{#each functions as |method|}}
+{{#each functions as |signature|}}
+<ol class="signatures-list">
   <li>
-    {{#each method.signatures as |signature|}}
-    <ol class="signatures-list">
-      <li>
-        <div class="access">
-          {{#if method.flags.isPublic}}
-            Public
-          {{/if}}
-          {{#if method.flags.isPrivate}}
-            Private
-          {{/if}}
-          {{#if method.flags.isProtected}}
-            Protected
-          {{/if}}
-        </div>
-        <div class="method-signature">
-          <h5>{{signature.name}}</h5>
-          <ol class="parameters">
-            {{#if signature.parameters}}
-              {{#each signature.parameters as |param|}}
-                <li>
-                  <div class="param-name">{{param.name}}</div>
-                </li>
-              {{/each}}
-            {{/if}}
-          </ol>
-          <div class="return-type">
-            {{type-annotation type=signature.type}}
-          </div>
-        </div>
-        {{#if signature.hasBody}}
-          <div class="method-body">
-            {{#if signature.parameters}}
-            <strong class="sub">Arguments</strong>
-            <ol class="parameters-list">
-              {{#each signature.parameters as |param|}}
-              <li>
-                {{param.name}}: {{type-annotation type=param.type}}
-              </li>
-              {{/each}}
-            </ol>
-            {{/if}}
-            {{#if signature.comment}}
-              <p>{{signature.comment.text}}</p>
-            {{/if}}
-          </div>
+    <div class="access">
+      {{#if method.flags.isPublic}}
+        Public
+      {{/if}}
+      {{#if method.flags.isPrivate}}
+        Private
+      {{/if}}
+      {{#if method.flags.isProtected}}
+        Protected
+      {{/if}}
+    </div>
+    <div class="method-signature">
+      <h5>{{signature.name}}</h5>
+      <ol class="parameters">
+        {{#if signature.parameters}}
+          {{#each signature.parameters as |param|}}
+            <li>
+              <div class="param-name">{{param.name}}</div>
+            </li>
+          {{/each}}
         {{/if}}
-      </li>
-    </ol>
-    {{/each}}
+      </ol>
+      <div class="return-type">
+        {{type-annotation type=signature.type}}
+      </div>
+    </div>
+    {{#if signature.hasBody}}
+      <div class="method-body">
+        {{#if signature.parameters}}
+        <strong class="sub">Arguments</strong>
+        <ol class="parameters-list">
+          {{#each signature.parameters as |param|}}
+          <li>
+            {{param.name}}: {{type-annotation type=param.type}}
+          </li>
+          {{/each}}
+        </ol>
+        {{/if}}
+        {{#if signature.comment}}
+          <p>{{signature.comment.text}}</p>
+        {{/if}}
+      </div>
+    {{/if}}
   </li>
+</ol>
 {{/each}}
-</ul>

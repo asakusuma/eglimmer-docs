@@ -11,10 +11,11 @@
   {{/if}}
 
   {{#if project.functions}}
-    {{module-list project=project.id title="Functions" modules=project.functions}}
+    <strong>Functions</strong>
+    {{function-list functions=project.functions}}
   {{/if}}
 
   {{#if project.objectLiterals}}
-    {{module-list project=project.id title="Object Literals" modules=project.objectLiterals}}
+    {{variable-list label="Object Literals" variables=project.objectLiterals}}
   {{/if}}
 </section>
