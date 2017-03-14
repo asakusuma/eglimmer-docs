@@ -1,7 +1,7 @@
 <section class="content-container">
-  <h5 class="project-breadcrumb">{{project.name}}</h5>
+  <h5 class="project-breadcrumb">{{#link-to "project" project.slug}}{{project.name}}{{/link-to}}</h5>
   <div class="module-header">
-    <h3>{{module.name}}</h3>
+    {{module.kindString}} <h3>{{module.name}}</h3>
   </div>
   {{#if module.sources}}
     {{source-link sources=module.sources}}

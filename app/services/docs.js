@@ -144,6 +144,11 @@ export default Ember.Service.extend({
       const realId = this.main.data.attributes.idMap[projectId][moduleId];
       record = this.main.included.find(({ id }) => id === realId);
     }
+
+    if (!record) {
+      return null;
+    }
+
     const inflated = toInflatedViewObject(record);
     return inflated;
   },
