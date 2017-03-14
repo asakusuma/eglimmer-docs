@@ -211,9 +211,17 @@ html,
 #content-container {
   bottom: 0px;
   top: 0px;
-  padding: 10px 20px;
   background-color: #FFF;
   flex: 3;
+}
+
+section.content-container {
+  padding: 10px 20px;
+  border-top: 1px solid #DDD;
+}
+
+section.content-container:first-child {
+  border: none;
 }
 
 .method-body {

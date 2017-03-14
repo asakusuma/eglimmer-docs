@@ -1,57 +1,59 @@
-<h5 class="project-breadcrumb">{{project.name}}</h5>
-<div class="module-header">
-  <h3>{{module.name}}</h3>
-</div>
-{{#if module.sources}}
-  {{source-link sources=module.sources}}
-{{/if}}
-{{#if module.extendedTypes}}
-  <div class="hierarchy-meta">
-  <strong>Extends</strong>
-  {{#each module.extendedTypes as |extends|}}
-    {{type-annotation type=extends}}
-  {{/each}}
+<section class="content-container">
+  <h5 class="project-breadcrumb">{{project.name}}</h5>
+  <div class="module-header">
+    <h3>{{module.name}}</h3>
   </div>
-{{/if}}
-
-{{#if module.implementedTypes}}
-  <div class="hierarchy-meta">
-  <strong>Implements</strong>
-  {{#each module.implementedTypes as |implements|}}
-    {{type-annotation type=implements}}
-  {{/each}}
-  </div>
-{{/if}}
-
-{{#if module.comment}}
-  <p>{{module.comment.text}}</p>
-{{/if}}
-
-{{#if module.constructors}}
-  <div class="constructors">
-    <strong>Constructor</strong>
-    {{function-list functions=module.constructors}}
-  </div>
-{{/if}}
-
-{{#if module.methods}}
-  <strong>Methods</strong>
-  {{function-list functions=module.methods}}
-{{/if}}
-
-{{#if module.properties}}
-<strong>Properties</strong>
-<ul class="properties-list">
-{{#each module.properties as |property|}}
-  <li class="property-definition">
-    <div class="property-title-container">
-      <h5>{{property.name}}</h5>
-      <div class="property-type">{{type-annotation type=property.type}}</div>
+  {{#if module.sources}}
+    {{source-link sources=module.sources}}
+  {{/if}}
+  {{#if module.extendedTypes}}
+    <div class="hierarchy-meta">
+    <strong>Extends</strong>
+    {{#each module.extendedTypes as |extends|}}
+      {{type-annotation type=extends}}
+    {{/each}}
     </div>
-    {{#if property.comment}}
-      <p>{{property.comment.text}}</p>
-    {{/if}}
-  </li>
-{{/each}}
-</ul>
-{{/if}}
+  {{/if}}
+
+  {{#if module.implementedTypes}}
+    <div class="hierarchy-meta">
+    <strong>Implements</strong>
+    {{#each module.implementedTypes as |implements|}}
+      {{type-annotation type=implements}}
+    {{/each}}
+    </div>
+  {{/if}}
+
+  {{#if module.comment}}
+    <p>{{module.comment.text}}</p>
+  {{/if}}
+
+  {{#if module.constructors}}
+    <div class="constructors">
+      <strong>Constructor</strong>
+      {{function-list functions=module.constructors}}
+    </div>
+  {{/if}}
+
+  {{#if module.methods}}
+    <strong>Methods</strong>
+    {{function-list functions=module.methods}}
+  {{/if}}
+
+  {{#if module.properties}}
+  <strong>Properties</strong>
+  <ul class="properties-list">
+  {{#each module.properties as |property|}}
+    <li class="property-definition">
+      <div class="property-title-container">
+        <h5>{{property.name}}</h5>
+        <div class="property-type">{{type-annotation type=property.type}}</div>
+      </div>
+      {{#if property.comment}}
+        <p>{{property.comment.text}}</p>
+      {{/if}}
+    </li>
+  {{/each}}
+  </ul>
+  {{/if}}
+</section>
