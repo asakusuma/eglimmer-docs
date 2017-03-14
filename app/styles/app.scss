@@ -114,12 +114,6 @@ html,
     color: $copy-one;
   }
   h5::before {
-    content: "function";
-  }
-}
-
-.methods-list .signatures-list .method-signature {
-  h5::before {
     content: "method";
   }
 }
@@ -127,6 +121,12 @@ html,
 .constructors .method-signature {
   h5::before {
     content: "";
+  }
+}
+
+.project-container .method-signature {
+  h5::before {
+    content: "function";
   }
 }
 
@@ -289,10 +289,6 @@ strong.sub {
     border-top: 1px solid #F3F3F3;
     margin-bottom: 8px;
   }
-  @include core-list();
-}
-
-.signatures-list {
   @include core-list();
 }
 

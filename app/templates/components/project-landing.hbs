@@ -1,7 +1,7 @@
 <section class="content-container readme">
 {{{project.readme}}}
 </section>
-<section class="content-container">
+<section class="content-container project-container">
   {{#if project.interfaces}}
     {{module-list project=project.id title="Interfaces" modules=project.interfaces}}
   {{/if}}
@@ -12,10 +12,18 @@
 
   {{#if project.functions}}
     <strong>Functions</strong>
-    {{function-list functions=project.functions}}
+    {{method-list methods=project.functions}}
   {{/if}}
 
   {{#if project.objectLiterals}}
     {{variable-list label="Object Literals" variables=project.objectLiterals}}
+  {{/if}}
+
+  {{#if project.typeAliases}}
+    {{variable-list label="Type Aliases" variables=project.typeAliases}}
+  {{/if}}
+
+  {{#if project.variables}}
+    {{variable-list label="Variables" variables=project.variables}}
   {{/if}}
 </section>

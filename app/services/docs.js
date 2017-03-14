@@ -51,6 +51,15 @@ function addViewMeta(attributes) {
       return method;
     });
   }
+  if (attributes.functions) {
+    attributes.functions = attributes.functions.map((method) => {
+      flagsMap(method);
+      if (method.callSignatures) {
+        Ember.set(method, 'signatures', method.callSignatures.map(signatureMap));
+      }
+      return method;
+    });
+  }
   if (attributes.constructors) {
     attributes.constructors = attributes.constructors.map((method) => {
       if (method.constructorSignatures) {
@@ -69,8 +78,9 @@ function _toViewObject({ type, id, attributes, relationships }, recurse = false)
   };
   let viewObject = identifier;
   if (!attributes) {
-    attributes = addViewMeta(materialize(identifier).attributes);
+    attributes = materialize(identifier).attributes;
   }
+  attributes = addViewMeta(attributes);
 
   for (let key in attributes) {
     viewObject[key] = attributes[key];
