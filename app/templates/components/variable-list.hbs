@@ -1,9 +1,9 @@
 <strong>{{label}}</strong>
 <ul class="properties-list">
 {{#each variables as |property|}}
-  <li class="property-definition">
+  <li class="property-definition" id="variable-{{property.slug}}">
     <div class="property-title-container">
-      <h5>{{property.name}}</h5>
+      <h5><a href="#variable-{{property.slug}}">{{property.name}}</a></h5>
       <div class="property-type">{{type-annotation type=property.type}}</div>
     </div>
     {{#if property.comment}}
