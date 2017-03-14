@@ -308,6 +308,10 @@ strong.sub {
   }
 }
 
+.project-breadcrumb {
+  color: $aux-gray;
+}
+
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .project-list {
     -moz-column-count: 2;
