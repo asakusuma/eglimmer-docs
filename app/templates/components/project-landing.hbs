@@ -1,1 +1,17 @@
 <h3>{{project.name}}</h3>
+
+{{#if project.interfaces}}
+  {{module-list project=project.id title="Interfaces" modules=project.interfaces}}
+{{/if}}
+
+{{#if project.classes}}
+  {{module-list project=project.id title="Classes" modules=project.classes}}
+{{/if}}
+
+{{#if project.functions}}
+  {{module-list project=project.id title="Functions" modules=project.functions}}
+{{/if}}
+
+{{#if project.objectLiterals}}
+  {{module-list project=project.id title="Object Literals" modules=project.objectLiterals}}
+{{/if}}

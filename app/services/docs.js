@@ -27,14 +27,14 @@ function flagsMap(thing) {
   let { flags } = thing;
   if (flags) {
     if (!flags.isPrivate && !flags.isProtected) {
-      flags.isPublic = true;
+      Ember.set(flags, 'isPublic', true);
     }
   }
   return thing;
 }
 
 function signatureMap(signature) {
-  signature.hasBody = signature.comment || signature.parameters;
+  Ember.set(signature, 'hasBody', signature.comment || signature.parameters);
   return signature;
 }
 
@@ -46,7 +46,7 @@ function addViewMeta(attributes) {
     attributes.methods = attributes.methods.map((method) => {
       flagsMap(method);
       if (method.callSignatures) {
-        method.signatures = method.callSignatures.map(signatureMap);
+        Ember.set(method, 'signatures', method.callSignatures.map(signatureMap));
       }
       return method;
     });
@@ -54,7 +54,7 @@ function addViewMeta(attributes) {
   if (attributes.constructors) {
     attributes.constructors = attributes.constructors.map((method) => {
       if (method.constructorSignatures) {
-        method.signatures = method.constructorSignatures.map(signatureMap);
+        Ember.set(method, 'signatures', method.constructorSignatures.map(signatureMap));
       }
       return method;
     });
@@ -80,7 +80,7 @@ function _toViewObject({ type, id, attributes, relationships }, recurse = false)
     let relationship = relationships[key];
     viewObject[key] = recurse ? relationship.data.map(toInflatedViewObject) : relationship.data;
   }
-  console.log(viewObject);
+
   return viewObject;
 }
 
@@ -123,7 +123,7 @@ export default Ember.Service.extend({
   main: DATA,
   fetchRoot() {
     return {
-      raw: this.main,
+      main: this.main.data.attributes,
       menu: generateMenu(this.main)
     };
   },
@@ -138,6 +138,6 @@ export default Ember.Service.extend({
     return inflated;
   },
   fetchProject(projectId) {
-    return toViewObject(this.main.included.find(({ type, id }) => type === 'projectdoc' && id === projectId));
+    return toInflatedViewObject(this.main.included.find(({ type, id }) => type === 'projectdoc' && id === projectId));
   }
 });

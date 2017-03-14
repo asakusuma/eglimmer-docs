@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   docs: Ember.inject.service(),
   model({ project_id }) {
     const docs = this.get('docs');
-    return docs.fetchProject(project_id);
+    const project = docs.fetchProject(project_id);
+    return project;
   }
 });

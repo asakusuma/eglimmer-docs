@@ -11,10 +11,16 @@ $medium-gray: #666;
 $type-color: #6987C9;
 
 #top-menu {
+  a {
+    text-decoration: none;
+    color: #444;
+  }
   h1 {
-    font-size: 100%;
-    margin: 5px;
+    font-size: 120%;
+    font-weight: 600;
+    margin: 5px 10px;
     padding: 5px;
+    letter-spacing: 0.05em;
   }
   border-bottom: 1px solid #DDD;
 }
@@ -172,7 +178,7 @@ html,
   border-right: 1px solid #DDD;
   flex-basis: auto; /* default value */
   flex-grow: 1;
-  min-width: 180px;
+  min-width: 50px;
   max-width: 300px;
   font-size: 120%;
   bottom: 0px;
@@ -290,4 +296,34 @@ strong.sub {
   margin: 10px 0px 0px 0px;
   font-size: 90%;
   font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+}
+
+.project-list {
+  border-top: 1px solid #F3F3F3;
+  list-style: none;
+  margin: 8px 0px 16px 0px;
+  padding: 8px 0px;
+  li {
+    padding: 4px 0px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .project-list {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-list {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+a {
+  color: $copy-three;
 }
