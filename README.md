@@ -2,7 +2,7 @@
 
 Standalone glimmer docs. This ember app needs to be converted to a glimmer app. See the issues page for tasks that need to be done.
 
-To update the data source, swap out [`main.json`](https://github.com/asakusuma/eglimmer-docs/blob/master/doc-source/main.json).
+To update the data source, swap out [`main.json`](https://github.com/asakusuma/eglimmer-docs/blob/master/doc-source/main.json). Data should come from [`json-typescript-docs`](https://github.com/asakusuma/json-typescript-docs).
 
 ## Prerequisites
 
