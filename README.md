@@ -1,7 +1,8 @@
 # eglimmer-docs
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Standalone glimmer docs. This ember app needs to be converted to a glimmer app. See the issues page for tasks that need to be done.
+
+To update the data source, swap out `[main.json](https://github.com/asakusuma/eglimmer-docs/blob/master/doc-source/main.json)`.
 
 ## Prerequisites
 
